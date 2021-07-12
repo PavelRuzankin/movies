@@ -1,0 +1,76 @@
+@import "../../scss/helpers/mixins.scss";
+@import "../../scss/helpers/variables.scss";
+
+.movies {
+  width: 100%;
+  padding-top: $padding-base;  
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$padding-base;
+}
+
+.movieCardWrapper {
+  width: 100%;
+  display: block;
+	width: 100%;
+	float: left;
+}
+
+.movieCard {
+  display: block;
+  margin: 0 $padding-base $padding-base 0;
+	z-index: 0;
+  overflow: hidden;
+  background-color: $block-bg;
+  @include bordered();
+
+   img {
+    width: 100%;
+  }
+
+   h1 {
+    font-size: $common-size;
+    color: $main-color;
+    padding-top: $padding-base;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.info {
+  padding-right: $padding-base;
+  padding-left: $padding-base;
+}
+
+.favoriteWrapper {
+  padding-bottom: $padding-base;
+}
+
+@media only screen and (min-width: 450px) {
+	.movieCardWrapper {
+		width: 50%;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.movieCardWrapper {
+		width: 33.333%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.movieCardWrapper {
+		width: 20%;
+	}
+}
+
+@media only screen and (min-width: 1100px) {
+	.movieCardWrapper {
+		width: 12.5%;
+	}
+}
+

@@ -1,0 +1,22 @@
+@import "../../../scss/helpers/mixins.scss";
+@import "../../../scss/helpers/variables.scss";
+
+.average {
+  color: $main-bg;
+  font-size: $common-size;
+  display: flex;
+  color: $main-color;
+  padding-top: $padding-base;
+  padding-bottom: $padding-base;
+  
+  i {
+    margin-left: $padding-base / 2; 
+  }
+}
+
+.full {
+  font-size: 30px ;
+  i {
+    color: $main-color !important;
+  }
+}

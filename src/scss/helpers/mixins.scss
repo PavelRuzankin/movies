@@ -1,0 +1,17 @@
+@import "./variables.scss"; 
+
+@mixin container() {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin bordered() {
+  border: $base-border;
+  border-radius: $radius;
+}
+
+@mixin center(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

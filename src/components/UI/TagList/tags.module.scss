@@ -1,0 +1,39 @@
+@import "../../../scss/helpers/mixins.scss";
+@import "../../../scss/helpers/variables.scss";
+
+.tags {
+  width: 100%;
+
+  h1 {
+    font-size: $common-size;
+    color: $main-color;
+    padding-top: $padding-base;
+  }
+
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-right: $padding-base;
+    margin-top: $padding-base;
+    background-color: $element-bg;
+    @include bordered(); 
+    padding: $padding-base / 2;
+
+    span {
+      font-size: $common-size;
+      color: $main-bg
+    }
+  }
+}
+
+.close {
+  cursor: pointer;
+  padding-left: $padding-base / 2;
+}

@@ -1,0 +1,30 @@
+@import "../../scss/helpers/variables.scss";
+@import "../../scss/helpers/mixins.scss";
+
+.information{
+  padding-bottom: $padding-base;
+}
+
+.title {
+  font-size: $ui-size;
+  color: $main-color;
+  padding-bottom: $padding-base * 2;
+}
+
+.date {
+  font-size: $common-size;
+  padding-bottom: $padding-base;
+}
+
+.description {
+  padding-top: $padding-base * 2;
+  padding-bottom: $padding-base * 2;
+
+  font-size: $common-size;
+}
+
+@media only screen and (max-width: 860px) {
+  .title {
+    font-size: $sub-ui-size;
+  }
+}

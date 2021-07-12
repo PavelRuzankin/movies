@@ -1,0 +1,10 @@
+@import "../../scss/helpers/mixins.scss"; 
+@import "../../scss/helpers/variables.scss"; 
+
+.config{
+  width: 100%;
+}
+
+.container {
+  @include container();
+}

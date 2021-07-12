@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from "react-router-dom"
+import Favorites from './components/Favorites';
 
-function App() {
+import Header from "./components/Header"
+import Main from './pages/Main';
+import Movie from './pages/Movie';
+
+import DefaultRedirect from './routing/DefaultRedirect';
+
+const App: React.FC = (): React.ReactElement => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Header/>
+      <Switch>
+
+        <Route exact path="/movies">
+          <Main/>
+        </Route>
+
+        <Route exact path={"/movie/:id"}>
+          <Movie/>
+        </Route>
+
+        <DefaultRedirect/>
+
+      </Switch>
+      <Favorites/>
+    </React.Fragment>
   );
 }
 

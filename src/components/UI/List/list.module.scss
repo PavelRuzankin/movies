@@ -1,0 +1,43 @@
+@import "../../../scss/helpers/variables.scss";
+@import "../../../scss/helpers/mixins.scss";
+
+.list {
+  width: 100%;
+  max-height: 400px;
+  overflow: auto;
+  @include bordered(); 
+
+  :last-child {
+    border: none !important;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background-color: $block-bg;
+  border-bottom: $base-border;
+  padding-right: $padding-base;
+  overflow: hidden;
+  cursor: pointer;
+
+  span {
+    flex: 1 0;
+    margin-left: $padding-base * 2;
+    font-size: $common-size;
+    color: $text-color;
+  }
+}
+
+.imageWrapper {
+  height: 100%;
+  width: 67px;
+  border-right: $base-border;
+}
+
+@media only screen and (max-width: 500px) {
+  .item {
+    height: 70px;
+  }
+}

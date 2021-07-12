@@ -1,0 +1,10 @@
+@import "../../../scss/helpers/variables.scss";
+
+.button {
+  width: $ui-size;
+  height: $ui-size;
+  border: none;
+  background: $element-bg;
+  border-radius: $radius;
+  cursor: pointer;
+}

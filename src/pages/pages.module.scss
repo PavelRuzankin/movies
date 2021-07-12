@@ -1,0 +1,45 @@
+@import "../scss/helpers/mixins.scss"; 
+@import "../scss/helpers/variables.scss"; 
+
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  @include container();
+}
+
+.movieWrapper{
+  padding-top: $padding-base;
+  display: flex;
+}
+
+.imageWrapper{
+  min-width: 400px;
+  margin-right: $padding-base * 2;
+  overflow: hidden;
+}
+
+.loadingWrapper {
+  height: 100px;
+  @include center()
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .imageWrapper {
+    min-width: 250px
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .movieWrapper {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    margin-right: 0;
+    margin-bottom: $padding-base * 2;
+  }
+}
+

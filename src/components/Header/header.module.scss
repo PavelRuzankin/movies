@@ -1,0 +1,65 @@
+@import "../../scss/helpers/variables.scss";
+@import "../../scss/helpers/mixins.scss";
+
+.header {
+  width: 100%;
+  padding: 20px 0;
+  background-color: $block-bg;
+  display: flex;
+  align-items: center;
+
+}
+
+.container {
+  @include container();
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.title {
+  font-size: $ui-size;
+  color: $main-color;
+  flex: 1 0;
+  white-space: nowrap;
+  margin-right: $padding-base;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.activities{
+  display: flex;
+  
+  > div {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .title{
+    font-size: $sub-ui-size;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .container{
+    flex-wrap: wrap;
+  }
+
+  .activities{
+    padding-top: $padding-base;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+	.activities {
+    flex-direction: column;
+    > div {
+      margin-bottom: $padding-base;
+    }
+	}
+}
